@@ -179,9 +179,9 @@ story-gen-book-action-trait6 = amusingly
 story-gen-book-action-trait7 = fancifully
 story-gen-book-action-trait8 = impressively
 story-gen-book-action-trait9 = irresponsibly
-story-gen-book-action-trait10 = severely
-story-gen-book-action-trait11 = ruthlessly
-story-gen-book-action-trait12 = playfully
+story-gen-book-action-trait10 = owoly
+story-gen-book-action-trait11 = uwuly
+story-gen-book-action-trait12 = cutely :3
 story-gen-book-action-trait13 = thoughtfully
 
 story-gen-book-location1 = in an underground complex
@@ -229,19 +229,7 @@ story-gen-book-element7 = theme of this work
 story-gen-book-element8 = literary style
 story-gen-book-element9 = artwork
 
-story-gen-book-element-trait1 = terrifying
-story-gen-book-element-trait2 = disgusting
-story-gen-book-element-trait3 = wonderful
-story-gen-book-element-trait4 = cute
-story-gen-book-element-trait5 = boring
-story-gen-book-element-trait6 = strange
-story-gen-book-element-trait7 = amusing
-story-gen-book-element-trait8 = whimsical
-story-gen-book-element-trait9 = impressive
-story-gen-book-element-trait10 = interesting
-story-gen-book-element-trait11 = inadequate
-story-gen-book-element-trait12 = sad
-story-gen-book-element-trait13 = rather depressing
+story-gen-book-element-trait1 = strange :3
 
 
 
