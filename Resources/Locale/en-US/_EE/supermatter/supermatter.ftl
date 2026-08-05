@@ -51,7 +51,7 @@ supermatter-announcement-cc-tamper =
 supermatter-collide =
     {CAPITALIZE(THE($target))} slams into {THE($sm)}!
 supermatter-collide-mob =
-    {CAPITALIZE(THE($target))}'s body flashes into dust!
+    {CAPITALIZE(THE($target))}'s body GOT ABSOLUTELY EVISCERATED!!!!!!! :3
 supermatter-collide-insert =
     {CAPITALIZE(THE($target))} touches {THE($sm)} with {THE($item)} and it flashes into dust!
 supermatter-collide-insert-user =
@@ -59,4 +59,4 @@ supermatter-collide-insert-user =
 supermatter-collide-insert-unremoveable =
     {CAPITALIZE(THE($target))} touches {THE($sm)} with {THE($item)} and flashes into dust!
 supermatter-collide-insert-unremoveable-user =
-    You touch {THE($sm)} with {THE($item)} and flash into dust!
+    You touch {THE($sm)} with {THE($item)} and flash into dust! hehe! shouldn't have done that!
