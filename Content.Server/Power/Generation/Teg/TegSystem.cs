@@ -186,14 +186,14 @@ public sealed class TegSystem : EntitySystem
             if (hotA)
             {
                 // A -> B
-                airA.Temperature -= transfer / cA;
-                airB.Temperature += outTransfer / cB;
+                airA.Temperature += transfer / cA;
+                airB.Temperature -= outTransfer / cB;
             }
             else
             {
                 // B -> A
-                airA.Temperature += outTransfer / cA;
-                airB.Temperature -= transfer / cB;
+                airA.Temperature -= outTransfer / cA;
+                airB.Temperature += transfer / cB;
             }
         }
 
