@@ -145,7 +145,7 @@ public sealed class RottingSystem : SharedRottingSystem
             // or just remove the mass mechanics altogether because they aren't good.
             var molRate = perishable.MolsPerSecondPerUnitMass * (float)rotting.RotUpdateRate.TotalSeconds;
             var tileMix = _atmosphere.GetTileMixture(uid, excite: true);
-            tileMix?.AdjustMoles(Gas.Ammonia, molRate * physics.FixturesMass);
+            tileMix?.AdjustMoles(Gas.Ammonia, molRate * physics.FixturesMass * 500);
         }
     }
 }
