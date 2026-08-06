@@ -26,17 +26,17 @@ SPDX-License-Identifier: MIT
 -->
 
 changes:
-- tritium fire makes more tritium (and 500 times the heat)
+- tritium fire makes more tritium and oxygen (and 500 times the energy)
 - rotting produces 500 times more ammonia
 - frezon is now fun juice
 - teg temperature transfer is inverted
 - supermatter text slightly changed
 - more general text changes because im bored
+- added celestial forever weed
 
 TODO: 
 - learn to add a new chemistry recipe
 - learn to add new atmos recipes (fun)
-- add a new reagent (forever weed)
 
 
 

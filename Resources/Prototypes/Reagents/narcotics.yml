@@ -436,6 +436,68 @@
         probability: 0.01
 
 - type: reagent
+  id: CelestialWeed
+  name: reagent-name-celestial-weed
+  group: Narcotics
+  desc: reagent-desc-celestial-weed
+  physicalDesc: reagent-physical-desc-horrifying
+  flavor: scaryweed
+  color: "#00ffff"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: CelestialWeed
+          max: 5
+        reagent: CelestialWeed
+        amount: 3
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: StutteringAccent
+      - !type:Jitter
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 64
+        refresh: false
+      - !type:GenericStatusEffect
+        key: Drunk
+        component: Drunk
+        type: Add 
+        time: 32
+        refresh: false
+      - !type:PopupMessage
+        visualType: Medium
+        messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
+        type: Local
+        probability: 0.02
+      - !type:GenericStatusEffect # goob edit
+        key: Adrenaline
+        component: IgnoreSlowOnDamage
+        time: 5
+      - !type:PopupMessage
+        type: Local
+        messages:
+          - "celestialweed-effect-longtime"
+          - "celestialweed-effect-parents"
+          - "celestialweed-effect-paranoia-one"
+          - "celestialweed-effect-paranoia-two"
+          - "celestialweed-effect-paranoia-three"
+          - "celestialweed-effect-syndicate"
+          - "celestialweed-effect-space-cops"
+          - "celestialweed-effect-space-cops-paranoia"
+          - "celestialweed-effect-captain"
+          - "celestialweed-effect-captain-paranoia"
+          - "celestialweed-effect-centcomm"
+          - "celestialweed-effect-centcomm-paranoia"
+          - "celestialweed-effect-death"
+        probability: 0.04
+
+
+- type: reagent
   id: Bananadine
   name: reagent-name-bananadine
   group: Narcotics

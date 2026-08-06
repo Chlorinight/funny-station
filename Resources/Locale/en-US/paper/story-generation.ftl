@@ -230,6 +230,17 @@ story-gen-book-element8 = literary style
 story-gen-book-element9 = artwork
 
 story-gen-book-element-trait1 = strange :3
+story-gen-book-element-trait2 = strange :3
+story-gen-book-element-trait3 = strange :3
+story-gen-book-element-trait4 = strange :3
+story-gen-book-element-trait5 = strange :3
+story-gen-book-element-trait6 = strange :3
+story-gen-book-element-trait7 = strange :3
+story-gen-book-element-trait8 = strange :3
+story-gen-book-element-trait9 = strange :3
+story-gen-book-element-trait10 = strange :3
+story-gen-book-element-trait11 = strange :3
+story-gen-book-element-trait12 = strange :3
 
 
 

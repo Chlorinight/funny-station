@@ -50,6 +50,9 @@ reagent-desc-space-drugs = An illegal compound which induces a number of effects
 reagent-name-forever-weed = forever weed
 reagent-desc-forever-weed = Baking rainbow cannabis has caused a chemical alteration. Does not fully metabolize on its own, causes hallicinations and paranoia.
 
+reagent-name-celestial-weed = celestial forever weed
+reagent-desc-celestial-weed = You are so, so, going to die.
+
 reagent-name-nocturine = nocturine
 reagent-desc-nocturine = A highly effective sedative and hypnotic, developed by the Syndicate for stealth operations. One-way ticket to honk-shoo town.
 

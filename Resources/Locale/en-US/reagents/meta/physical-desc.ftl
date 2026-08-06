@@ -124,3 +124,4 @@ reagent-physical-desc-holy = holy
 reagent-physical-desc-slimy = slimy
 reagent-physical-desc-neural = neural
 reagent-physical-desc-robotic = robotic
+reagent-physical-desc-horrifying = HORRIFYING

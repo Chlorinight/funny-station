@@ -1,0 +1,13 @@
+﻿celestialweed-effect-longtime = I hope you don't wanna come down any time soon haha cuz you're gonna be like that for a LONG time haha !!!!
+celestialweed-effect-parents = I invited over all of your parents and family and friends and mentors and they're all coming over for hours!!!!
+celestialweed-effect-paranoia-one = *knock knock*
+celestialweed-effect-paranoia-two = Something is struggling to get out of your inventory!
+celestialweed-effect-paranoia-three = Hey did you hear that?
+celestialweed-effect-syndicate = That person is a syndicate agent, I know it
+celestialweed-effect-space-cops = Don't let the space cops know you're high
+celestialweed-effect-space-cops-paranoia = The space cops knows you're high
+celestialweed-effect-captain = Don't let the Captain know you're high
+celestialweed-effect-captain-paranoia = The Captain knows you're high
+celestialweed-effect-centcomm = Don't let CentComm know you're high
+celestialweed-effect-centcomm-paranoia = CentComm knows you're high
+celestialweed-effect-centcomm-death = EVERYTHING IS BAD BAD BAD VERY BAD!!!!

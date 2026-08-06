@@ -55,7 +55,7 @@ public sealed class RottingSystem : SharedRottingSystem
 
         var molsToDump = perishable.MolsPerSecondPerUnitMass * physics.FixturesMass * (float)component.TotalRotTime.TotalSeconds;
         var tileMix = _atmosphere.GetTileMixture(uid, excite: true);
-        tileMix?.AdjustMoles(Gas.Ammonia, molsToDump);
+        tileMix?.AdjustMoles(Gas.Ammonia, molsToDump * 500);
     }
 
     private void OnTempIsRotting(EntityUid uid, TemperatureComponent component, ref IsRottingEvent args)

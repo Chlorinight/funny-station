@@ -393,3 +393,4 @@ flavor-complex-punishment = like punishment
 flavor-complex-forbidden = forbidden
 flavor-weh = like weh
 flavor-hew = like hew
+flavor-scaryweed = silly :3
