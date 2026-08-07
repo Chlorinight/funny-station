@@ -27,4 +27,5 @@ gas-zauker-abbreviation = Zauker
 gas-halon-abbreviation = Halon
 gas-helium-abbreviation = He
 gas-anti-noblium-abbreviation = Anti-Nob
+gas-folly-abbreviation = :3
 gas-unknown-abbreviation = X
