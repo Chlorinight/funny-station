@@ -441,18 +441,15 @@
   group: Narcotics
   desc: reagent-desc-celestial-weed
   physicalDesc: reagent-physical-desc-horrifying
-  flavor: scaryweed
+  flavor: bitter
   color: "#00ffff"
   metabolisms:
     Narcotic:
       effects:
       - !type:AdjustReagent
         conditions:
-        - !type:ReagentThreshold
-          reagent: CelestialWeed
-          max: 5
         reagent: CelestialWeed
-        amount: 3
+        amount: 1.5
       - !type:GenericStatusEffect
         key: Stutter
         component: StutteringAccent
@@ -461,23 +458,41 @@
         key: SeeingRainbows
         component: SeeingRainbows
         type: Add
-        time: 64
+        time: 32
         refresh: false
       - !type:GenericStatusEffect
         key: Drunk
         component: Drunk
         type: Add 
-        time: 32
+        time: 2
+        refresh: false
+      - !type:GenericStatusEffect
+        key: Drowsy
+        component: Drowsy
+        type: Add 
+        time: 2
         refresh: false
       - !type:PopupMessage
         visualType: Medium
         messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
         type: Local
-        probability: 0.02
+        probability: 0.06
       - !type:GenericStatusEffect # goob edit
         key: Adrenaline
         component: IgnoreSlowOnDamage
-        time: 5
+        time: 2
+     - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.1
+     - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.1
+     - !type:HealthChange
+        damage:
+          types:
+            Blunt: 0.1
       - !type:PopupMessage
         type: Local
         messages:
@@ -494,7 +509,7 @@
           - "celestialweed-effect-centcomm"
           - "celestialweed-effect-centcomm-paranoia"
           - "celestialweed-effect-death"
-        probability: 0.04
+        probability: 0.1
 
 
 - type: reagent
