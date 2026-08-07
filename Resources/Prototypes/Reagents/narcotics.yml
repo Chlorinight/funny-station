@@ -467,8 +467,8 @@
         time: 2
         refresh: false
       - !type:GenericStatusEffect
-        key: Drowsy
-        component: Drowsy
+        key: Drowsiness
+        component: Drowsiness
         type: Add 
         time: 2
         refresh: false
@@ -485,13 +485,7 @@
         damage:
           types:
             Poison: 0.1
-     - !type:HealthChange
-        damage:
-          types:
             Cellular: 0.1
-     - !type:HealthChange
-        damage:
-          types:
             Blunt: 0.1
       - !type:PopupMessage
         type: Local
