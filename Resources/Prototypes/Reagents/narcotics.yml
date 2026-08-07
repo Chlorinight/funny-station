@@ -446,7 +446,7 @@
   metabolisms:
     Narcotic:
       effects:
-      - !type:AdjustReagent
+      - !type:AdjustReagent #explodes into a puddle of celweed
         conditions:
         reagent: CelestialWeed
         amount: 1.5
@@ -477,16 +477,17 @@
         messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
         type: Local
         probability: 0.06
-      - !type:GenericStatusEffect # goob edit
+      - !type:GenericStatusEffect
         key: Adrenaline
         component: IgnoreSlowOnDamage
         time: 2
-     - !type:HealthChange
+     - !type:HealthChange #just annoying
         damage:
           types:
             Poison: 0.1
             Cellular: 0.1
             Blunt: 0.1
+            Asphyxiation: 0.05
       - !type:PopupMessage
         type: Local
         messages:
