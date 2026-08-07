@@ -465,18 +465,46 @@
 
 # Assmos - /tg/ gases end
 
-#- type: gasReaction
-#  id: WaterVaporPuddle
-#  priority: 1
-#  maximumTemperature: 373.13 # Boiling point of water.
-#  minimumRequirements: # In this case, same as minimum mole count.
-#    - 0  # oxygen
-#    - 0  # nitrogen
-#    - 0  # carbon dioxide
-#    - 0  # plasma
-#    - 0  # tritium
-#    - 1  # water vapor
-#  effects:
-#    - !type:WaterVaporReaction
-#      gas: 5
-#      reagent: Water
+- type: gasReaction
+  id: WaterVaporPuddle
+  priority: 1
+  maximumTemperature: 373.13 # Boiling point of water.
+  minimumRequirements: # In this case, same as minimum mole count.
+    - 0  # oxygen
+    - 0  # nitrogen
+    - 0  # carbon dioxide
+    - 0  # plasma
+    - 0  # tritium
+    - 1  # water vapor
+  effects:
+    - !type:WaterVaporReaction
+      gas: 5
+      reagent: Water
+
+- type: gasReaction
+  id: FollyProduction
+  priority: 30
+  minimumRequirements: # In this case, same as minimum mole count.
+  - 0     # oxygen
+  - 0     # nitrogen
+  - 0     # carbon dioxide
+  - 0.01     # plasma
+  - 0     # tritium
+  - 0.01     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+  - 0  # bz
+  - 0     # healium
+  - 0     # nitrium
+  - 0     # pluox
+  - 0     # hydrogen
+  - 0     # hypernob
+  - 0  # protonitrate
+  - 0     # zauker
+  - 0     # halon
+  - 0     # helium
+  - 0     # antinob
+  - 0.01  # folly
+  effects:
+    - !type:FollyProductionReaction {}
