@@ -459,13 +459,6 @@
             max: 110
         reagent: CelestialWeed
         amount: 0.05
-      - !type:AdjustReagent #I'm so sorry.
-        conditions:
-          - !type:ReagentThreshold
-            min: 110
-            max: 140
-        reagent: CelestialWeed
-        amount: 0.6
       - !type:Emote
         emote: Crying
         showInChat: true
