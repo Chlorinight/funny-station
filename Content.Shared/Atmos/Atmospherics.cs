@@ -230,6 +230,7 @@ namespace Content.Shared.Atmos
             [Gas.Halon] = Loc.GetString("gas-halon-abbreviation"),
             [Gas.Helium] = Loc.GetString("gas-helium-abbreviation"),
             [Gas.AntiNoblium] = Loc.GetString("gas-anti-noblium-abbreviation"),
+            [Gas.Folly] = Loc.GetString("gases-folly-abbreviation")
         };
 
 
@@ -258,6 +259,7 @@ namespace Content.Shared.Atmos
             [Gas.Halon] = Loc.GetString("gases-halon"),
             [Gas.Helium] = Loc.GetString("gases-helium"),
             [Gas.AntiNoblium] = Loc.GetString("gases-anti-noblium"),
+            [Gas.Folly] = Loc.GetString("gases-folly"),
         };
 
         #region Excited Groups
@@ -555,5 +557,6 @@ namespace Content.Shared.Atmos
         Halon = 17, // Assmos - /tg/ gases
         Helium = 18, // Assmos - /tg/ gases
         AntiNoblium = 19, // Assmos - /tg/ gases
+        Folly = 20, // custom gas
     }
 }
