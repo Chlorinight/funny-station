@@ -449,13 +449,13 @@
       - !type:AdjustReagent #explodes into a puddle of celweed
         conditions:
         reagent: CelestialWeed
-        amount: 1.5
+        amount: 1
       - !type:AdjustReagent #duplications
         conditions:
           - !type:ReagentThreshold
             min: 50   #faster replication
         reagent: CelestialWeed
-        amount: 0.5
+        amount: 1
       - !type:AdjustReagent #I'm so sorry.
         conditions:
           - !type:ReagentThreshold
@@ -479,8 +479,8 @@
         time: 2
         refresh: false
       - !type:GenericStatusEffect
-        key: Drowsiness
-        component: Drowsiness
+        key: Drunk
+        component: Drunk
         type: Add 
         time: 2
         refresh: false
@@ -489,27 +489,6 @@
         messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
         type: Local
         probability: 0.06
-      - !type:GenericStatusEffect
-        key: Adrenaline
-        component: IgnoreSlowOnDamage
-        time: 2
-      - !type:HealthChange #just annoying
-        damage:
-          types:
-            Poison: 0.1
-            Cellular: 0.1
-            Blunt: 0.1
-            Asphyxiation: 0.05
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          min: 100   #too much celweed in your bloodstreams
-        damage:
-          types:
-            Poison: 1
-            Cellular: 1
-            Blunt: 2
-            Asphyxiation: 0.5
       - !type:PopupMessage
         type: Local
         messages:
@@ -527,7 +506,24 @@
           - "celestialweed-effect-centcomm-paranoia"
           - "celestialweed-effect-death"
         probability: 0.1
-
+    Poison:
+      effects:
+      - !type:HealthChange #just annoying
+        damage:
+          types:
+          Poison: 0.01
+          Cellular: 0.01
+          Blunt: 0.01
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 100   #too much celweed in your bloodstreams
+        damage:
+          types:
+            Poison: 0.5
+            Cellular: 0.5
+            Blunt: 2
+            Asphyxiation: 1
 
 - type: reagent
   id: Bananadine
