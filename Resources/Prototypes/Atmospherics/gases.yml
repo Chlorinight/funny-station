@@ -278,3 +278,19 @@
   dangerLevel: 6 # Funkystation - UI update
 
 # Assmos - /tg/ gases end
+
+# my gases #mygases
+
+- type: gas
+  id: 8
+  name: gases-folly
+  specificHeat: 15000 # cheater's coolant
+  heatCapacityRatio: 2
+  molarMass: 50
+  gasOverlaySprite: /Textures/Effects/atmospherics.rsi
+  gasOverlayState: frezon
+  gasMolesVisible: 0.6
+  color: ff004f
+  reagent: Folly
+  pricePerMole: 100 #funkystation
+  dangerLevel: 1 # Funkystation - UI update
