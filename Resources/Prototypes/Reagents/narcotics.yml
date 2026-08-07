@@ -448,24 +448,41 @@
       effects:
       - !type:AdjustReagent #explodes into a puddle of celweed
         conditions:
+          - !type:ReagentThreshold
+            max: 110 #so you can still be injected with chems instead of being SO FULL you cant be cured
         reagent: CelestialWeed
-        amount: 1
+        amount: 0.51
       - !type:AdjustReagent #duplications
         conditions:
           - !type:ReagentThreshold
             min: 50   #faster replication
+            max: 110
         reagent: CelestialWeed
-        amount: 1
+        amount: 0.05
       - !type:AdjustReagent #I'm so sorry.
         conditions:
           - !type:ReagentThreshold
-            min: 100
+            min: 110
+            max: 140
         reagent: CelestialWeed
-        amount: 5
+        amount: 0.6
+      - !type:Emote
+        emote: Crying
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:Emote
+        emote: Gasp
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 100
       - !type:GenericStatusEffect
         key: Stutter
         component: StutteringAccent
-      - !type:Jitter
       - !type:GenericStatusEffect
         key: SeeingRainbows
         component: SeeingRainbows
@@ -478,17 +495,6 @@
         type: Add 
         time: 2
         refresh: false
-      - !type:GenericStatusEffect
-        key: Drunk
-        component: Drunk
-        type: Add 
-        time: 2
-        refresh: false
-      - !type:PopupMessage
-        visualType: Medium
-        messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
-        type: Local
-        probability: 0.06
       - !type:PopupMessage
         type: Local
         messages:
@@ -511,19 +517,20 @@
       - !type:HealthChange #just annoying
         damage:
           types:
-          Poison: 0.01
-          Cellular: 0.01
-          Blunt: 0.01
+            Poison: 0.01
+            Cellular: 0.01
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           min: 100   #too much celweed in your bloodstreams
         damage:
           types:
-            Poison: 0.5
-            Cellular: 0.5
-            Blunt: 2
-            Asphyxiation: 1
+            Poison: 0.05
+            Cellular: 0.05
+            Blunt: 0.05
+            Piercing: 0.08
+            Cold: 0.05
+            Asphyxiation: 0.1
 
 - type: reagent
   id: Bananadine

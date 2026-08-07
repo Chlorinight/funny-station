@@ -1365,6 +1365,13 @@
           min: 1
         reagent: ForeverWeed
         amount: -1
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: CelestialWeed
+          min: 1
+        reagent: CelestialWeed
+        amount: -1
   reactiveEffects:
     Extinguish:
       methods: [ Touch ]
