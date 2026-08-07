@@ -262,3 +262,11 @@
   components:
     - type: GasMiner
       spawnGas: AntiNoblium
+
+- type: entity
+  name: folly gas miner
+  parent: GasMinerBase
+  id: GasMinerFolly
+  components:
+    - type: GasMiner
+      spawnGas: Folly

@@ -450,6 +450,18 @@
         conditions:
         reagent: CelestialWeed
         amount: 1.5
+      - !type:AdjustReagent #duplications
+        conditions:
+          - !type:ReagentThreshold
+            min: 50   #faster replication
+        reagent: CelestialWeed
+        amount: 0.5
+      - !type:AdjustReagent #I'm so sorry.
+        conditions:
+          - !type:ReagentThreshold
+            min: 100
+        reagent: CelestialWeed
+        amount: 5
       - !type:GenericStatusEffect
         key: Stutter
         component: StutteringAccent
@@ -481,13 +493,23 @@
         key: Adrenaline
         component: IgnoreSlowOnDamage
         time: 2
-     - !type:HealthChange #just annoying
+      - !type:HealthChange #just annoying
         damage:
           types:
             Poison: 0.1
             Cellular: 0.1
             Blunt: 0.1
             Asphyxiation: 0.05
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 100   #too much celweed in your bloodstreams
+        damage:
+          types:
+            Poison: 1
+            Cellular: 1
+            Blunt: 2
+            Asphyxiation: 0.5
       - !type:PopupMessage
         type: Local
         messages:

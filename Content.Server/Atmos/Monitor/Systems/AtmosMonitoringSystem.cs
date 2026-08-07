@@ -190,6 +190,7 @@ public sealed class AtmosMonitorSystem : EntitySystem
                         component.PressureThreshold ?? new(),
                         component.TemperatureThreshold ?? new(),
                         component.GasThresholds ?? new()
+
                     ));
                 }
 
