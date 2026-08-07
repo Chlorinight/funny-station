@@ -458,6 +458,10 @@ namespace Content.Shared.Atmos
         /// </summary>
         public const float ProtoNitrateBZConversionEnergy = -10000f;
 
+        /// <summary>
+        /// The amount of energy 1.8 moles of folly forming from water vapor and plasma releases.
+        /// </summary>
+        public const float FollyProductionEnergy = -100f;
 
 
         /// <summary>

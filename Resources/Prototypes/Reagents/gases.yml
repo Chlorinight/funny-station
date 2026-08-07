@@ -1052,3 +1052,18 @@
         conditions:
         - !type:OrganType
           type: Thaven
+
+- type: reagent
+  id: Folly
+  name: reagent-name-folly
+  desc: reagent-desc-folly
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#ff004f"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate #imp, thaven can breathe all gases safely
+        conditions:
+        - !type:OrganType
+          type: Thaven

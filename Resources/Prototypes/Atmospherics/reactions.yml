@@ -481,7 +481,7 @@
       gas: 5
       reagent: Water
 
-- type: gasReaction
+- type: gasReaction # Uses Folly as a catalyst to form more Folly.
   id: FollyProduction
   priority: 30
   minimumRequirements: # In this case, same as minimum mole count.

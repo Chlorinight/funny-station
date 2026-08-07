@@ -33,10 +33,10 @@ changes:
 - supermatter text slightly changed
 - more general text changes because im bored
 - added celestial forever weed
+- learned to add new atmos stuff (new gas: Folly, formed from water vapor + plasma + folly)
 
 TODO: 
 - learn to add a new chemistry recipe
-- learn to add new atmos recipes (fun)
 
 
 

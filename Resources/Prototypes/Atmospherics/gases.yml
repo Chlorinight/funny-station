@@ -284,7 +284,7 @@
 - type: gas
   id: 8
   name: gases-folly
-  specificHeat: 15000 # cheater's coolant
+  specificHeat: 10000 # cheater's coolant
   heatCapacityRatio: 2
   molarMass: 50
   gasOverlaySprite: /Textures/Effects/atmospherics.rsi
@@ -292,5 +292,5 @@
   gasMolesVisible: 0.6
   color: ff004f
   reagent: Folly
-  pricePerMole: 100 #funkystation
+  pricePerMole: 0.25 #funkystation
   dangerLevel: 1 # Funkystation - UI update
