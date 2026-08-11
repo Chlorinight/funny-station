@@ -72,8 +72,8 @@ namespace Content.Server.Atmos.Reactions
 
                 // Conservation of mass is only a little important.
                 mixture.AdjustMoles(Gas.Tritium, burnedFuel*0.2);
-                 mixture.AdjustMoles(Gas.Oxygen, burnedFuel*0.2);
-        mixture.AdjustMoles(Gas.WaterVapor, burnedFuel*0.6);
+                mixture.AdjustMoles(Gas.Oxygen, burnedFuel*0.2);
+              mixture.AdjustMoles(Gas.WaterVapor, burnedFuel*0.6);
 
                 mixture.ReactionResults[(byte)GasReaction.Fire] += burnedFuel;
             }
