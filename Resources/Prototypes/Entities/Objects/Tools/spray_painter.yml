@@ -60,5 +60,6 @@
       proto-nitrate: '#379f4f' 
       hyper-noblium: '#11ffb8' 
       zauker: '#13422e' 
+      folly: '#ff004f'
   - type: StaticPrice
     price: 40

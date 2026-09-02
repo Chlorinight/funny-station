@@ -59,3 +59,6 @@ reagent-desc-helium = A very inert gas produced by the fusion of hydrogen and it
 
 reagent-name-anti-noblium = anti-noblium
 reagent-desc-anti-noblium = We still don't know what it does, but it sells for a lot.
+
+reagent-name-folly = folly
+reagent-desc-folly = An incredibly effective and inert coolant, simple to create but practically worthless.

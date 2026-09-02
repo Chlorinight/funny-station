@@ -25,14 +25,14 @@ public sealed partial class FollyProductionReaction : IGasReactionEffect
         var initFolly = mixture.GetMoles(Gas.Folly);
 
         var temperature = mixture.Temperature;
-        var heatEfficiency = Math.Min(temperature * 0.005f, Math.Min(initFolly * 0.2f, Math.Min(initWater * 0.9f, initPlasma * 0.9f)));
+        var heatEfficiency = Math.Min(temperature * 0.005f, Math.Min(initFolly * 0.2f, Math.Min(initWater * 1.8f, initPlasma * 1.8f)));
 
-        if (heatEfficiency <= 0 || initWater - heatEfficiency * 0.9f < 0 || initPlasma - heatEfficiency * 0.9f < 0 || initFolly - heatEfficiency * 0.2f < 0 )
+        if (heatEfficiency <= 0 || initWater - heatEfficiency * 1.8f < 0 || initPlasma - heatEfficiency * 1.8f < 0 || initFolly - heatEfficiency * 0.2f < 0 || temperature < 573.15) // 300 celcius
             return ReactionResult.NoReaction;
 
-        mixture.AdjustMoles(Gas.Plasma, -heatEfficiency * 0.9f);
-        mixture.AdjustMoles(Gas.WaterVapor, -heatEfficiency * 0.9f);
-        mixture.AdjustMoles(Gas.Folly, heatEfficiency * 1.8f);
+        mixture.AdjustMoles(Gas.Plasma, -heatEfficiency * 1.8f);
+        mixture.AdjustMoles(Gas.WaterVapor, -heatEfficiency * 1.8f);
+        mixture.AdjustMoles(Gas.Folly, heatEfficiency * 3f);
 
         var energyReleased = heatEfficiency * Atmospherics.FollyProductionEnergy;
 
