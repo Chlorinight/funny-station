@@ -37,7 +37,7 @@ changes:
 
 TODO: 
 - learn to add a new chemistry recipe
-
+- learn to add a new machine (possibly to turn UF6 gas into enriched uranium? and make uranium rod recipes require that.)
 
 
 # funky readme:
