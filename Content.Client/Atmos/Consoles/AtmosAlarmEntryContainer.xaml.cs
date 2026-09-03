@@ -63,6 +63,8 @@ public sealed partial class AtmosAlarmEntryContainer : BoxContainer
         [Gas.Halon] = "H", // Assmos - /tg/ gases
         [Gas.Helium] = "He", // Assmos - /tg/ gases
         [Gas.AntiNoblium] = "AnNo", // Assmos - /tg/ gases
+        [Gas.Folly] = ":3", // Why????
+        [Gas.CLFThree] = "ClF₃", 
     };
 
     public AtmosAlarmEntryContainer(NetEntity uid, EntityCoordinates? coordinates)
