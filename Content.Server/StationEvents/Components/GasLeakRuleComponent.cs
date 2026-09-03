@@ -36,6 +36,7 @@ public sealed partial class GasLeakRuleComponent : Component
         Gas.Helium, // Assmos - /tg/ gases
         Gas.AntiNoblium, // Assmos - /tg/ gases
         Gas.Folly,
+        Gas.CLFThree, // Burn!
     };
 
     /// <summary>
