@@ -508,3 +508,33 @@
   - 0.1  # folly
   effects:
     - !type:FollyProductionReaction {}
+
+- type: gasReaction
+  id: CLF3Fire # Hot!
+  priority: -1
+  minimumTemperature: 373.149 # Same as Atmospherics.FireMinimumTemperatureToExist
+  minimumRequirements: # In this case, same as minimum mole count.
+  - 0.01  # oxygen
+  - 0     # nitrogen
+  - 0     # carbon dioxide
+  - 0     # plasma
+  - 0     # tritium
+  - 0     # vapor
+  - 0     # miasma
+  - 0     # n2o
+  - 0     # frezon
+  - 0     # bz
+  - 0     # healium
+  - 0     # nitrium
+  - 0     # pluox
+  - 0     # hydrogen
+  - 0     # hypernob
+  - 0     # protonitrate
+  - 0     # zauker
+  - 0     # halon
+  - 0     # helium
+  - 0     # antinob
+  - 0     # folly
+  - 0.01  # chlorine trifluoride
+  effects:
+  - !type:CLFThreeFireReaction {}

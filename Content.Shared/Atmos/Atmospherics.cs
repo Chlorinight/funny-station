@@ -230,7 +230,9 @@ namespace Content.Shared.Atmos
             [Gas.Halon] = Loc.GetString("gas-halon-abbreviation"),
             [Gas.Helium] = Loc.GetString("gas-helium-abbreviation"),
             [Gas.AntiNoblium] = Loc.GetString("gas-anti-noblium-abbreviation"),
-            [Gas.Folly] = Loc.GetString("gases-folly-abbreviation")
+            [Gas.Folly] = Loc.GetString("gas-folly-abbreviation"),
+            [Gas.CLFThree] = Loc.GetString("gas-clf3-abbreviation"),
+            [Gas.UF6] = Loc.GetString("gas-uf6-abbreviation"),
         };
 
 
@@ -260,6 +262,8 @@ namespace Content.Shared.Atmos
             [Gas.Helium] = Loc.GetString("gases-helium"),
             [Gas.AntiNoblium] = Loc.GetString("gases-anti-noblium"),
             [Gas.Folly] = Loc.GetString("gases-folly"),
+            [Gas.CLFThree] = Loc.GetString("gases-clf3"),
+            [Gas.UF6] = Loc.GetString("gases-uf6"),
         };
 
         #region Excited Groups
@@ -289,7 +293,7 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     Total number of gases. Increase this if you want to add more!
         /// </summary>
-        public const int TotalNumberOfGases = 21; // Assmos - /tg/ gases
+        public const int TotalNumberOfGases = 23; // Assmos - /tg/ gases
 
         /// <summary>
         ///     This is the actual length of the gases arrays in mixtures.
@@ -525,12 +529,12 @@ namespace Content.Shared.Atmos
         /// <summary>
         ///     The default pressure at which pumps and powered equipment max out at, in kPa.
         /// </summary>
-        public const float MaxOutputPressure = 4500;
+        public const float MaxOutputPressure = 7500;
 
         /// <summary>
         ///     The default maximum speed powered equipment can work at, in L/s.
         /// </summary>
-        public const float MaxTransferRate = 200;
+        public const float MaxTransferRate = 300;
 
         #endregion
     }
@@ -562,5 +566,7 @@ namespace Content.Shared.Atmos
         Helium = 18, // Assmos - /tg/ gases
         AntiNoblium = 19, // Assmos - /tg/ gases
         Folly = 20, // custom gas
+        CLFThree = 21, // custom gas
+        UF6 = 22, // custom gas
     }
 }

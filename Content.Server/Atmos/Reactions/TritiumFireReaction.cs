@@ -71,9 +71,9 @@ namespace Content.Server.Atmos.Reactions
                 // TODO ATMOS Radiation pulse here!
 
                 // Maybe conservation of mass is a little important.
-                mixture.AdjustMoles(Gas.Tritium, burnedFuel*0.4);
-                mixture.AdjustMoles(Gas.Oxygen, burnedFuel*0.4/Atmospherics.TritiumBurnFuelRatio);
-                mixture.AdjustMoles(Gas.WaterVapor, burnedFuel*0.2);
+                mixture.AdjustMoles(Gas.Tritium, burnedFuel*0.4f);
+                mixture.AdjustMoles(Gas.Oxygen, burnedFuel*0.4f/Atmospherics.TritiumBurnFuelRatio);
+                mixture.AdjustMoles(Gas.WaterVapor, burnedFuel*0.2f);
 
                 mixture.ReactionResults[(byte)GasReaction.Fire] += burnedFuel;
             }

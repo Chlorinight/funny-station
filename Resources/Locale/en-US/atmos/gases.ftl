@@ -28,4 +28,6 @@ gas-halon-abbreviation = Halon
 gas-helium-abbreviation = He
 gas-anti-noblium-abbreviation = Anti-Nob
 gas-folly-abbreviation = :3
+gas-clf3-abbreviation = ClF₃
+gas-uf6-abbreviation = UF₆
 gas-unknown-abbreviation = X

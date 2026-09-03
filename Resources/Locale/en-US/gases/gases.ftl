@@ -29,4 +29,6 @@ gases-halon = Halon
 gases-helium = Helium
 gases-anti-noblium = Anti-Noblium
 gases-folly = Folly
+gases-clf3 = Chlorine Trifluoride
+gases-uf6 = Uranium Hexafluoride
 gases-unknown = Unknown

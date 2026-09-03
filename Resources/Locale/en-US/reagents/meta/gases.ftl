@@ -61,4 +61,7 @@ reagent-name-anti-noblium = anti-noblium
 reagent-desc-anti-noblium = We still don't know what it does, but it sells for a lot.
 
 reagent-name-folly = folly
-reagent-desc-folly = An incredibly effective and inert coolant, simple to create but practically worthless.
+reagent-desc-folly = A useful and inert coolant, simple to create but practically worthless.
+
+reagent-name-uf6 = uranium hexafluoride
+reagent-desc-uf6 = A radioactive gas used in the enrichment of uranium to isolate U-235.

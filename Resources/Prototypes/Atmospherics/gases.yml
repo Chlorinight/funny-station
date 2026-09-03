@@ -296,15 +296,23 @@
   dangerLevel: 1 # Funkystation - UI update
 
 - type: gas
-  id: 20
+  id: 21
   name: gases-clf3
   specificHeat: 15
   heatCapacityRatio: 2
   molarMass: 44
-  gasOverlaySprite: /Textures/Effects/atmospherics.rsi
-  gasOverlayState: folly
-  gasMolesVisible: 0.2
-  color: ff004f
-  reagent: Chlorine Trifluoride
+  color: ffc8c8
+  reagent: ChlorineTrifluoride
   pricePerMole: 1
+  dangerLevel: 6 # Funkystation - UI update
+
+- type: gas
+  id: 22
+  name: gases-uf6
+  specificHeat: 90
+  heatCapacityRatio: 2
+  molarMass: 300
+  color: a0a888
+  reagent: UraniumHexafluoride
+  pricePerMole: 3
   dangerLevel: 4 # Funkystation - UI update

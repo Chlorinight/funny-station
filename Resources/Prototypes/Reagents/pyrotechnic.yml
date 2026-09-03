@@ -145,6 +145,29 @@
         multiplier: 0.2
       - !type:AdjustTemperature
         amount: 6000
+    Gas:
+      effects:
+      - !type:FlammableReaction
+        multiplier: 0.3
+      - !type:Ignite
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+      - !type:PopupMessage
+        messages: [ "clf3-it-burns", "clf3-get-away" ]
+        visualType: MediumCaution
+        probability: 0.3
+        type: Local
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 2
+            Poison: 1
+            Caustic: 0.5 # CLF3 is corrosive
+      - !type:FlammableReaction
+        multiplier: 0.2
+      - !type:AdjustTemperature
+        amount: 6000
   reactiveEffects:
     Flammable:
       methods: [ Touch ]

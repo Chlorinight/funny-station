@@ -1067,3 +1067,31 @@
         conditions:
         - !type:OrganType
           type: Thaven
+
+- type: reagent
+  id: UraniumHexafluoride
+  name: reagent-name-uf6
+  desc: reagent-desc-uf6
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#a0a888"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate #imp, thaven can breathe all gases safely
+        conditions:
+        - !type:OrganType
+          type: Thaven
+            - !type:HealthChange
+        conditions:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType #imp, thaven can breathe all gases safely
+          type: Thaven
+          shouldHave: false
+        ignoreResistances: true
+        damage:
+          types:
+            Radiation: 1
+            Poison: 3
+            Cellular: 0.1
