@@ -56,7 +56,9 @@ public sealed class AtmosResinDespawnSystem : EntitySystem
             Gas.Zauker,
             Gas.Halon,
             Gas.Helium,
-            Gas.AntiNoblium
+            Gas.AntiNoblium,
+            Gas.CLFThree,
+            Gas.UF6
         };
 
         float totalMolesRemoved = 0f;

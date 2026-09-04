@@ -53,6 +53,8 @@ namespace Content.Server.Atmos.Portable
             Gas.Halon, // Assmos - /tg/ gases
             Gas.Helium, // Assmos - /tg/ gases
             Gas.AntiNoblium, // Assmos - /tg/ gases
+            Gas.CLFThree,
+            Gas.UF6,
         };
 
         [ViewVariables(VVAccess.ReadWrite)]

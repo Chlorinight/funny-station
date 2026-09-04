@@ -71,15 +71,15 @@ namespace Content.Server.Atmos.Reactions
                 // TODO ATMOS Radiation pulse here!
 
                 // Maybe conservation of mass is a little important.
-                mixture.AdjustMoles(Gas.Tritium, burnedFuel*0.4f);
-                mixture.AdjustMoles(Gas.Oxygen, burnedFuel*0.4f/Atmospherics.TritiumBurnFuelRatio);
-                mixture.AdjustMoles(Gas.WaterVapor, burnedFuel*0.2f);
+                mixture.AdjustMoles(Gas.Tritium, burnedFuel*0.2f);
+                mixture.AdjustMoles(Gas.Oxygen, burnedFuel*0.2f/Atmospherics.TritiumBurnFuelRatio);
+                mixture.AdjustMoles(Gas.WaterVapor, burnedFuel*0.6f);
 
                 mixture.ReactionResults[(byte)GasReaction.Fire] += burnedFuel;
             }
 
             energyReleased /= heatScale; // adjust energy to make sure speedup doesn't cause mega temperature rise
-            energyReleased *= 500;
+            energyReleased *= 5;
             if (energyReleased > 0)
             {
                 var newHeatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);

@@ -49,6 +49,8 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.Halon, // Assmos - /tg/ gases
             Gas.Helium, // Assmos - /tg/ gases
             Gas.AntiNoblium, // Assmos - /tg/ gases
+            Gas.CLFThree,
+            Gas.UF6,
         };
 
         // Presets for 'dumb' air alarm modes

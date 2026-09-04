@@ -26,7 +26,7 @@ SPDX-License-Identifier: MIT
 -->
 
 changes:
-- tritium fire makes 500 times the energy
+- tritium fire makes 5 times the energy
 - rotting produces 500 times more ammonia
 - frezon is now fun juice
 - teg temperature transfer is inverted

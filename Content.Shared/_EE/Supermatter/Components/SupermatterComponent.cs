@@ -498,6 +498,9 @@ public static class SupermatterGasData
         { Gas.Halon,         new(0.1f, 0.1f,  0.1f,0.1f) }, // Assmos - /tg/ gases
         { Gas.Helium,        new(0.1f, 0.1f,  0.1f,0.1f) }, // Assmos - /tg/ gases
         { Gas.AntiNoblium,   new(-0.5f,14f,   1f,  1f) }, // Assmos - /tg/ gases
+        { Gas.Folly,         new(-2f,  20f,  -5f,  10f ) },
+        { Gas.CLFThree,      new(0f,   1f,    1f,  1f ) },
+        { Gas.UF6,           new(40f,  15f,   2f,  1f ) },
     };
 
     public static float CalculateGasMixModifier(GasMixture mix, Func<SupermatterGasFact, float> getModifier)

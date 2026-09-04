@@ -270,3 +270,19 @@
   components:
     - type: GasMiner
       spawnGas: Folly
+
+- type: entity
+  name: ClF3 gas miner
+  parent: GasMinerBase
+  id: GasMinerCLFThree
+  components:
+    - type: GasMiner
+      spawnGas: CLFThree
+
+- type: entity
+  name: UF6 gas miner
+  parent: GasMinerBase
+  id: GasMinerUF6
+  components:
+    - type: GasMiner
+      spawnGas: UF6

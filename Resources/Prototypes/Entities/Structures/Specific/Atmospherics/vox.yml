@@ -37,6 +37,8 @@
       Helium: stationAmmonia # Assmos - /tg/ gases
       AntiNoblium: danger # Assmos - /tg/ gases
       Folly: stationAmmonia # CUSTOM GAS
+      CLFThree: danger # CUSTOM GAS
+      UF6: danger # CUSTOM GAS
 
 - type: entity
   parent: [AirSensorVoxBase, AirSensor]
@@ -78,6 +80,8 @@
     - Halon
     - Helium
     - AntiNoblium
+    - ChlorineTrifluoride
+    - UraniumHexafluoride
   - type: AtmosPipeLayers
     alternativePrototypes:
       Primary: GasVentScrubberVox

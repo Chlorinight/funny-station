@@ -68,7 +68,7 @@ public sealed partial class CLFThreeFireReaction : IGasReactionEffect
             mixture.ReactionResults[(byte)GasReaction.Fire] += burnedFuel;
         }
 
-        energyReleased /= heatScale*0.8f; // adjust energy to make sure speedup doesn't cause mega temperature rise
+        energyReleased /= heatScale; // adjust energy to make sure speedup doesn't cause mega temperature rise
         if (energyReleased > 0)
         {
             var newHeatCapacity = atmosphereSystem.GetHeatCapacity(mixture, true);

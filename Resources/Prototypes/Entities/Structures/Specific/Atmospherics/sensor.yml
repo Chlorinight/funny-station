@@ -59,6 +59,8 @@
       Helium: stationAmmonia # Assmos - /tg/ gases
       AntiNoblium: danger # Assmos - /tg/ gases
       Folly: stationAmmonia # CUSTOM GAS
+      CLFThree: danger
+      UF6: danger
   - type: Tag
     tags:
     - AirSensor

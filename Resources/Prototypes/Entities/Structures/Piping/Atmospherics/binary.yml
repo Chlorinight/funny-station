@@ -861,3 +861,74 @@
         Secondary: GasTemperatureGateAlt1
         Tertiary: GasTemperatureGateAlt2
 
+# HOW THE FUCK DO YOU DO YMLS????
+
+- type: entity
+  parent: GasBinaryBase
+  id: GasCentrifuge
+  name: gas centrifuge
+  description: A centrifuge that refines UF6 into Enriched Uranium, and other byproducts.
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+    - type: ExtensionCableReceiver
+    - type: LightningTarget
+      priority: 1
+    - type: ApcPowerReceiver
+      powerLoad: 10000
+    
+    - type: Sprite
+      sprite: Structures/Machines/gascentrifuge.rsi
+      layers:
+        - sprite: Structures/Piping/Atmospherics/pipe.rsi
+          state: pipeStraight
+          map: [ "enum.PipeVisualLayers.Pipe" ]
+        - state: off
+          map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+    - type: AtmosPipeLayers
+      spriteLayersRsiPaths:
+        enum.PipeVisualLayers.Pipe:
+          Primary: Structures/Piping/Atmospherics/pipe.rsi
+          Secondary: Structures/Piping/Atmospherics/pipe_alt1.rsi
+          Tertiary: Structures/Piping/Atmospherics/pipe_alt2.rsi
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.GasCentrifugeVisuals.State:
+          enabled:
+            On: { state: running }
+            Off: { state: unlit }
+    - type: PipeColorVisuals
+    - type: AmbientSound
+      enabled: false
+      volume: -4
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/gas_pump.ogg
+    - type: NodeContainer
+      nodes:
+        inlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: North
+        outlet:
+          !type:PipeNode
+          nodeGroupID: Pipe
+          pipeDirection: South
+    - type: AtmosDevice
+    - type: AtmosPipeColor
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalGlassBreak
+        - !type:ChangeConstructionNodeBehavior
+          node: machineFrame
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - type: AtmosMonitoringConsoleDevice
+      navMapBlip: GasValve

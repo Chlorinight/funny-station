@@ -536,6 +536,17 @@ namespace Content.Shared.Atmos
         /// </summary>
         public const float MaxTransferRate = 300;
 
+        /// <summary>
+        ///     The rate at which the Gas Centrifuge processes UF6.
+        /// </summary>
+        public const float GasCentrifugeRate = 5f;
+
+        /// <summary>
+        ///     The percentage of mols still unprocessed by the Gas Centrifuge. (out of 100%)
+        /// </summary>
+        public const float GasCentrifugeWaste = 15f;
+
+
         #endregion
     }
 
