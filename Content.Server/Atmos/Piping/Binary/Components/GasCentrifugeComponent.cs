@@ -30,7 +30,10 @@ namespace Content.Server.Atmos.Piping.Binary.Components
         public float RefineRate { get; set; } = Atmospherics.GasCentrifugeRate;
 
         [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("WasteAmount")]
-        public float WasteAmount { get; set; } = Atmospherics.GasCentrifugeWaste/100;
+        [DataField("Efficiency")]
+        public float Efficiency { get; set; } = Atmospherics.GasCentrifugeEfficiency/100;
+
+        [DataField("lastMolesTransferred")]
+        public float lastMolesTransferred;
     }
 }

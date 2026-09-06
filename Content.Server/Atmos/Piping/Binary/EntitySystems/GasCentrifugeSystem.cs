@@ -65,38 +65,38 @@ public sealed class GasCentrifugeSystem : EntitySystem
                 return;
             }
 
-            if (inlet.Air.TotalMoles > 0 && inlet.Air.Temperature > 0)
+            if (inlet.Air.TotalMoles > 0 && inlet.Air.Temperature > comp.MinTemp)
             {
-                var removed = inlet.Air.RemoveVolume(comp.RefineRate);
+                var removed = inlet.Air.RemoveVolume(comp.RefineRate * _atmosphereSystem.PumpSpeedup() * args.dt);
                 var nUF6 = removed.GetMoles(Gas.UF6);
-                removed.AdjustMoles(Gas.UF6, -(nUF6-(nUF6*comp.WasteAmount)));
+                removed.AdjustMoles(Gas.CLFThree, nUF6*comp.Efficiency);
+                removed.AdjustMoles(Gas.UF6, 0f-(nUF6-(nUF6*comp.Efficiency)));
 
+                comp.lastMolesTransferred = removed.TotalMoles;
                 _atmosphereSystem.Merge(outlet.Air, removed);
                 _ambientSoundSystem.SetAmbience(uid, true);
             }
+            
 
             UpdateAppearance(uid, comp);
             _ambientSoundSystem.SetAmbience(uid, true);
         }
 
-    private void OnExamined(Entity<GasCentrifugeComponent> gate, ref ExaminedEvent args)
+    private void OnExamined(EntityUid uid, GasCentrifugeComponent comp, ref ExaminedEvent args)
     {
-        if (!Comp<TransformComponent>(gate).Anchored || !args.IsInDetailsRange) // Not anchored? Out of range? No status.
+        if (!Comp<TransformComponent>(uid).Anchored || !args.IsInDetailsRange) // Not anchored? Out of range? No status.
             return;
 
-        var str = Loc.GetString("gas-centrifuge-examined", ("flowRate", $"{gate.Comp.FlowRate:0.#}"));
+        var str = Loc.GetString("gas-centrifuge-examined", ("flowRate", $"{comp.lastMolesTransferred:0.#}"));
         args.PushMarkup(str);
     }
-
+    
     private void UpdateAppearance(EntityUid uid, GasCentrifugeComponent? comp = null, AppearanceComponent? appearance = null)
         {
             if (!Resolve(uid, ref comp, ref appearance, false))
                 return;
 
             bool compOn = comp.Enabled && (TryComp<ApcPowerReceiverComponent>(uid, out var power) && power.Powered);
-            if (!compOn)
-                _appearance.SetData(uid, GasCentrifugeVisuals.State, GasCentrifugeState.Off, appearance);
-            else
-                _appearance.SetData(uid, GasCentrifugeVisuals.State, GasCentrifugeState.On, appearance);
+             _appearance.SetData(uid, PumpVisuals.Enabled, compOn);
         }
 }

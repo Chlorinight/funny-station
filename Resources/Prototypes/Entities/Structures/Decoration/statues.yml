@@ -50,3 +50,35 @@
   - type: Construction
     graph: BananiumStatueClown
     node: bananiumStatue
+
+- type: entity
+  id: PlaceholderEntity
+  parent: BaseStructure
+  name: sprite placeholder
+  description: A Decorative object that may morph into any shape at any time.
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: Structures/Decoration/spriteplaceholder.rsi
+    state: base
+    drawdepth: Mobs
+    offset: "0.0,1"
+  - type: Appearance
+  - type: Transform
+    anchored: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.4"
+        density: 190
+        mask:
+        - LargeMobMask
+        layer:
+        - WallLayer
+  - type: Anchorable
+  - type: Pullable
+  - type: Physics

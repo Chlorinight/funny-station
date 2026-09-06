@@ -867,7 +867,7 @@
   parent: GasBinaryBase
   id: GasCentrifuge
   name: gas centrifuge
-  description: A centrifuge that refines UF6 into Enriched Uranium, and other byproducts.
+  description: A centrifuge that refines UF6 into Enriched UF6, compact but inefficient.
   placement:
     mode: AlignAtmosPipeLayers
   components:
@@ -876,15 +876,19 @@
       priority: 1
     - type: ApcPowerReceiver
       powerLoad: 10000
-    
     - type: Sprite
+      noRot: true
       sprite: Structures/Machines/gascentrifuge.rsi
       layers:
-        - sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: pipeStraight
-          map: [ "enum.PipeVisualLayers.Pipe" ]
-        - state: off
-          map: [ "enum.SubfloorLayers.FirstLayer", "enabled" ]
+      - sprite: Structures/Piping/Atmospherics/pipe.rsi
+        state: pipeBinaryConnectors
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+      - state: off
+        sprite: Structures/Machines/gascentrifuge.rsi
+        offset: "0.0,1"
+        drawdepth: Mobs
+        map: [ "enum.GasCentrifugeVisuals.State" ]
+      drawdepth: Mobs
     - type: AtmosPipeLayers
       spriteLayersRsiPaths:
         enum.PipeVisualLayers.Pipe:
@@ -894,10 +898,10 @@
     - type: Appearance
     - type: GenericVisualizer
       visuals:
-        enum.GasCentrifugeVisuals.State:
-          enabled:
-            On: { state: running }
-            Off: { state: unlit }
+      enum.PumpVisuals.Enabled:
+        enabled:
+          True: { state: on }
+          False: { state: off }
     - type: PipeColorVisuals
     - type: AmbientSound
       enabled: false
@@ -915,6 +919,7 @@
           !type:PipeNode
           nodeGroupID: Pipe
           pipeDirection: South
+    - type: GasCentrifuge
     - type: AtmosDevice
     - type: AtmosPipeColor
     - type: Destructible
@@ -932,3 +937,18 @@
           acts: ["Destruction"]
     - type: AtmosMonitoringConsoleDevice
       navMapBlip: GasValve
+    - type: Transform
+      anchored: true
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.4,-0.4,0.4,0.4"
+          density: 190
+          layer:
+          - WallLayer
+    - type: Physics
+      bodyType: Static
+    - type: Anchorable
+    - type: Pullable
